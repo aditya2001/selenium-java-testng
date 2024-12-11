@@ -23,10 +23,10 @@ public class BaseTest {
         driver.get("https://www.saucedemo.com/");
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void quit() {
-        if (DriverManager.getDriver() != null) {
-            DriverManager.getDriver().quit();
-        }
-    }
+//    @AfterMethod(alwaysRun = true)
+//    public void quit() {
+//        if (DriverManager.getDriver() != null) {
+//            DriverManager.getDriver().quit();
+//        }
+//    }
 }

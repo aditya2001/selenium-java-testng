@@ -14,7 +14,7 @@ public final class DriverManager {
 
     private DriverManager() {
     }
-    // This is a thread-safe singleton class and we have made global access method synchronized so that only one thread can execute this method at a time.
+    // This is a thread-safe singleton class,and we have made global access method synchronized so that only one thread can execute this method at a time.
     private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
     /**
      * this is used to get the driver with ThreadLocal

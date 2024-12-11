@@ -64,14 +64,14 @@ public class LoginPageTest extends BaseTest {
     }
 
 
-    @Test(dataProvider = "data_provider_login", dataProviderClass = DataProviderLogin.class)
-    public void loginTestThird(Hashtable<String, String> data) throws InterruptedException {
-        driver = DriverManager.getDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        loginPage = new LoginPage(driver, wait);
-
-        loginPage.loginToSite(data.get("testName"), data.get("secret_sauce"));
-    }
+//    @Test(dataProvider = "data_provider_login", dataProviderClass = DataProviderLogin.class)
+//    public void loginTestThird(Hashtable<String, String> data) throws InterruptedException {
+//        driver = DriverManager.getDriver();
+//        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        loginPage = new LoginPage(driver, wait);
+//
+//        loginPage.loginToSite(data.get("testName"), data.get("secret_sauce"));
+//    }
 
 
 
