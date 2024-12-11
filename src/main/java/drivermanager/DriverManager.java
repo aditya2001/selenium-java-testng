@@ -45,7 +45,7 @@ public final class DriverManager {
 //            setDriver(new ChromeDriver(options));
         } else if (browser.equals("firefox")) {
             FirefoxOptions options = new FirefoxOptions();
-            options.addArguments("-headless");
+//            options.addArguments("-headless");
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver(options);
         } else if (browser.equals("safari")) {

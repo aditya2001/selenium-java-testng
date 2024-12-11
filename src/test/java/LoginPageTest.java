@@ -16,9 +16,8 @@ import java.time.Duration;
 import java.util.Hashtable;
 
 public class LoginPageTest extends BaseTest {
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private LoginPage loginPage;
+
+
 //    LoginPage loginPage = new LoginPage();
 //    HomePage homePage;
 
@@ -39,12 +38,15 @@ public class LoginPageTest extends BaseTest {
 //        Assert.assertEquals(title, "Swag Labs");
 //    }
 
+//    @Parameters({"browser"})
     @Test(priority=1)
     public void loginTestFirst(){
-        driver = DriverManager.getDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        loginPage = new LoginPage(driver, wait);
-
+        WebDriver driver = DriverManager.getDriver();
+        System.out.println("Thread local value1" + driver);
+        driver.get("https://www.saucedemo.com/");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        LoginPage loginPage = new LoginPage(driver, wait);
+        System.out.println("Thread local value1" + driver);
         loginPage.loginToSite("testName", "secret_sauce");
     }
 
@@ -53,13 +55,15 @@ public class LoginPageTest extends BaseTest {
 //        boolean flag = loginPage.validateCRMImage();
 //        Assert.assertTrue(flag);
 //    }
-
+//    @Parameters({"browser"})
     @Test(priority=2)
     public void loginTestSecond() throws InterruptedException {
-        driver = DriverManager.getDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        loginPage = new LoginPage(driver, wait);
-
+        WebDriver driver = DriverManager.getDriver();
+        System.out.println("Thread local value2" + driver);
+        driver.get("https://www.saucedemo.com/");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        LoginPage loginPage = new LoginPage(driver, wait);
+        System.out.println("Thread local value2" + driver);
         loginPage.loginToSite("testName", "secret_sauce");
     }
 

@@ -19,8 +19,7 @@ public class BaseTest {
     @BeforeMethod
     public void beforeTest(String browser) throws Exception {
         DriverManager.initializeDriver(browser);
-        WebDriver driver = DriverManager.getDriver();
-        driver.get("https://www.saucedemo.com/");
+
     }
 
 //    @AfterMethod(alwaysRun = true)
